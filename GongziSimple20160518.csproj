@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: F:\Temp\计件软件\GONGZI2014-6-21\GongziSimple20160518.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11B7FC77-FCCF-4425-9CD4-F1AC44478AA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>GongziSimple</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ApplicationVersion>1.0.0.8</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.ReportViewer.WinForms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gongziDataSet.cs">
+      <DependentUpon>gongziDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gongziDataSet.designer.cs">
+      <DependentUpon>gongziDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GongziSimple\AESEncryption.cs" />
+    <Compile Include="GongziSimple\GrandDog.cs" />
+    <Compile Include="GongziSimple\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongziSimple\FrmProductStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongziSimple\FrmReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongziSimple\FrmSpecReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongziSimple\FrmWorkSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GongziSimple\Program.cs" />
+    <Compile Include="GongziSimple\PubFunc.cs" />
+    <Compile Include="GongziSimple\Properties\Resources.cs" />
+    <Compile Include="GongziSimple\Properties\Settings.cs" />
+    <Compile Include="CPUNum\HardWareHelper.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GongziSimple\FrmMain.resx" />
+    <EmbeddedResource Include="GongziSimple\FrmProductStep.resx" />
+    <EmbeddedResource Include="GongziSimple\FrmReportView.resx" />
+    <EmbeddedResource Include="GongziSimple\FrmSpecReport.resx" />
+    <EmbeddedResource Include="GongziSimple\FrmWorkSheet.resx" />
+    <EmbeddedResource Include="GongziSimple\Properties\Resources.resx" />
+    <EmbeddedResource Include="GongziSimple\WorkSheet.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gongziDataSet.xsc">
+      <DependentUpon>gongziDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gongziDataSet.xsd" />
+    <None Include="gongziDataSet.xss">
+      <DependentUpon>gongziDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+</Project>
