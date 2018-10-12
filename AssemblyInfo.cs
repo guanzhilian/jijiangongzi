@@ -11,5 +11,5 @@ using System.Security.Permissions;
 [assembly: AssemblyTitle("GongziSimple")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyVersion("1.0.0.8")]
+[assembly: AssemblyVersion("1.0.0.10")]
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
